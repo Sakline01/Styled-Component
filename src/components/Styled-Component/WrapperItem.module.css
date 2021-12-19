@@ -1,0 +1,26 @@
+.menus{
+    height: 17.5%;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    font-size: 1.3rem;
+}
+.menus>div{
+    display: flex;
+    height: 100%;
+    width: 20%;
+    align-items: center;
+}
+.menus>div:nth-child(1){
+    justify-content: center;
+}
+.menus>div>img{
+    height: 30%;
+    width: 40%;
+}
+.menus>div:nth-child(2){
+    flex-grow: 1;
+}
+h4{
+    font-weight: 500;
+}
