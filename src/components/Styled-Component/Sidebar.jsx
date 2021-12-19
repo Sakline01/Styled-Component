@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from "styled-components"
 import Wrapperitem from './WrapperItem';
+import Navbar from './Navbar';
 
 const Sidebar = () => {
     const Drawer = styled.div`
-    margin-top:2px;
     height:60vw;
+    min-height: 950px;
     width:20%;
+    min-width: 220px;
     border: black solid 1px;
     `;
     const Wrapper = styled.div`
@@ -15,13 +17,22 @@ const Sidebar = () => {
     border-top: black solid 1px;
     `;
     const SmallWrapper = styled.div`
-    height: 9%;
-    width: 100%;
-    border-right: blue solid 7px;
+    height: 8%;
+    width: 99vw;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: #3f51b5;
+    position: sticky;
+    top: 0;
+    /* overflow: hidden; */
     `;
     return (
+
         <Drawer>
-            <SmallWrapper></SmallWrapper>
+            <SmallWrapper>
+                <Navbar />
+            </SmallWrapper>
             <Wrapper>
                 <Wrapperitem source="https://cdn1.iconfinder.com/data/icons/hawcons/32/698925-icon-92-inbox-download-512.png" title="Inbox" />
                 <Wrapperitem source="https://cdn3.iconfinder.com/data/icons/indian-republic-day-26/512/1080_Chat_favorite_message_star-512.png" title="Starred" />
