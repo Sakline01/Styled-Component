@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { ThemeContext } from '../../ThemeContextProvider';
+import style from './navbar.module.css';
 
 const Navbar = () => {
+    const { handleDark, isDark, isChecked, setIsChecked } = useContext(ThemeContext);
     const LeftSide = styled.div`
     height: auto;
     min-width: 13%;
@@ -22,6 +25,7 @@ const Navbar = () => {
     font-weight: 400;
     height: 100%;
     width:15% ;
+    color: ${isDark === "light" ? "black" : "white"};
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -42,8 +46,12 @@ const Navbar = () => {
                 <MenuItem>About Us</MenuItem>
                 <MenuItem>Prices</MenuItem>
                 <MenuItem>Start Page</MenuItem>
-                <MenuItem>Offer</MenuItem>
                 <MenuItem>Contact</MenuItem>
+                <label className={style.switch}>
+                    <input checked={isChecked} onChange={(e) => { setIsChecked(t => e.target.checked ? true : false); handleDark() }} type="checkbox" />
+                    <div className={`${style.slider} ${style.round}`}>
+                    </div>
+                </label>
             </RightSide>
         </>
     );

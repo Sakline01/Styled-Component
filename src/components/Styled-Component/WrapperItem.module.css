@@ -1,9 +1,16 @@
 .menus{
     height: 17.5%;
-    width: 100%;
+    width: 98%;
     padding: 5px;
     display: flex;
     font-size: 1.3rem;
+    cursor: pointer;
+}
+.menus:hover{
+    background-color: turquoise;
+    width: 100%;
+    color: rgb(99, 95, 95);
+    transition: 1000ms;
 }
 .menus>div{
     display: flex;

@@ -2,9 +2,13 @@
   margin: 0px;
   padding: 0px;
 }
-body{
-  background: #fefefe;
+.App{
+  height: auto;
+  width: 100%;
 }
-/* .App {
-
-}  */
+.lightApp{
+  background-color: white;
+}
+.darkApp{
+  background-color: black;
+}
